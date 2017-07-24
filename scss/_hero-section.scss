@@ -1,0 +1,48 @@
+.hero-section {
+  background-image: url("../img/heroImage.jpg");
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px #000000;
+    padding: 1em;
+  }
+}
+
+.hero2 {
+  background-image: url("../img/how.jpg");
+  background-size: cover;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero2-text {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px #000000;
+    padding: 1em;
+  }
+}
+
+.hero3 {
+  background-image: url("../img/social.png");
+  background-size: cover;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  .hero3-text {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+    padding: 1em;
+  }
+}
