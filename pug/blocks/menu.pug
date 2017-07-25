@@ -1,9 +1,17 @@
-#nav-toggle.nav-toggle
-nav.main-nav#main-nav
-	ul.main-menu#main-menu
-		li: a(href="/") Inicio
-		li: a(href="#") Servicios
-		li: a(href="#") Tienda
-		li: a(href="#") Blog
-		li: a(href="#") Nosotros
-		li: a(href="#") Contacto
+.title-bar(data-responsive-toggle="main-menu" data-hide-for="medium")
+	button.menu-icon(data-toggle="main-nav")
+	.title-bar-title Menu
+
+.top-bar#main-menu
+	.top-bar-left
+		ul.menu
+			li: a(href="#") Security Nauj Revilo
+
+	.top-bar-right
+		ul.menu
+			li: a(href="#") Inicio
+			li: a(href="#") Servicios
+			li: a(href="#") Tienda
+			li: a(href="#") Blog
+			li: a(href="#") Nosotros
+			li: a(href="#") Contacto
