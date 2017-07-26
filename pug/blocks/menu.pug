@@ -1,17 +1,20 @@
-.title-bar(data-responsive-toggle="main-menu")
-	button.menu-icon(data-toggle="")
-	.title-bar-title Menu
+#nav(data-sticky-container)
+	.contain-to-grid(data-sticky data-margin-top="0" data-sticky-on="small" style="width:100%")
+		.title-bar(data-responsive-toggle="main-menu")
+			button.menu-icon(data-toggle="main-menu")
+			.title-bar-title Menu
 
-.top-bar#main-menu
-	.top-bar-left.show-for-medium
-		ul.menu
-			li: a(href="#") Security Nauj Revilo
+		.top-bar#main-menu(data-sticky data-margin-top="0")
+			.top-bar-left.show-for-medium
+				ul.menu
+					li: a(href="#") Security Nauj Revilo
 
-	.top-bar-right
-		ul.menu.vertical.medium-horizontal
-			li: a(href="#") Inicio
-			li: a(href="#") Servicios
-			li: a(href="#") Tienda
-			li: a(href="#") Blog
-			li: a(href="#") Nosotros
-			li: a(href="#") Contacto
+			.top-bar-right
+				ul.menu.vertical.medium-horizontal.expanded
+					li: a.fi-home.espacio(href="#") Inicio
+
+					li: a(href="#") Servicios
+					li: a(href="#") Tienda
+					li: a(href="#" target="_black") Blog
+					li: a(href="#") Nosotros
+					li: a(href="#") Contacto

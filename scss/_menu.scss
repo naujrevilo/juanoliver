@@ -7,3 +7,15 @@
 	}
   }
 }
+
+// Hacks para alinear icon fonts
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  position: relative;
+  top: .15em;
+  display: inline-block
+}
+
+.espacio:before {
+  margin-right: .3em;
+}
