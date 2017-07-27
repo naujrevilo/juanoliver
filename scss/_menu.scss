@@ -1,10 +1,15 @@
-.top-bar ul li{
-  a{
-	color: #FFFFFF;
-	
-	&:hover{
-	  color: #fff000;
-	}
+li a{
+  padding: 0;
+  margin: 0;
+  box-shadow: 1px 0 #fff;
+  transition: all 1.5s;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+
+  &:hover{
+	color: #fff000;
+	font-weight: 700;
   }
 }
 
