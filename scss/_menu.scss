@@ -1,17 +1,23 @@
 li a{
   padding: 0;
   margin: 0;
-  box-shadow: 1px 0 #fff;
   transition: all 1.5s;
   color: #fff;
   display: block;
   cursor: pointer;
+
+
+  &:not(.sitio){
+    border-right: 1px solid #fff;
+  }
 
   &:hover{
 	color: #fff000;
 	font-weight: 700;
   }
 }
+
+
 
 // Hacks para alinear icon fonts
 [class^="icon-"]:before,
@@ -23,4 +29,8 @@ li a{
 
 .espacio:before {
   margin-right: .3em;
+}
+
+li a.icon-envelope-o.espacio.last{
+  border-style: none;
 }
