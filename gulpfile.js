@@ -2,6 +2,10 @@ var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
+
+
 
 var sassPaths = [
   'bower_components/normalize.scss/sass',
@@ -13,7 +17,7 @@ gulp.task('pug', function() {
     gulp.src('pug/*.pug')
         .pipe(pug({
             pretty: true
-        })) // pip to jade plugin
+        }))
         .pipe(gulp.dest('./')); // tell gulp our output folder
 });
 
