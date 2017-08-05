@@ -1,4 +1,4 @@
-li a{
+li a {
   padding: 0;
   margin: 0;
   transition: all 1.5s;
@@ -6,18 +6,15 @@ li a{
   display: block;
   cursor: pointer;
 
-
-  &:not(.sitio){
-    border-right: 1px solid #fff;
+  &:not(.sitio) {
+	border-right: 1px solid #fff;
   }
 
-  &:hover{
-	color: #fff000;
+  &:hover {
+	color: #003466;
 	font-weight: 700;
   }
 }
-
-
 
 // Hacks para alinear icon fonts
 [class^="icon-"]:before,
@@ -31,6 +28,6 @@ li a{
   margin-right: .3em;
 }
 
-li a.icon-envelope-o.espacio.last{
+li a.icon-envelope-o.espacio.last {
   border-style: none;
 }
