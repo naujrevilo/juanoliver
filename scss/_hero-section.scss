@@ -8,13 +8,13 @@
   justify-content: center;
 
   .hero-section-text {
-    color: #FFFFFF;
-    text-shadow: 1px 1px 2px #000000;
-    padding: 1em;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+	padding: 1em;
 
-    h1 h3{
-      color: #ECF0F1;
-    }
+	h1 h3{
+	  color: #ECF0F1;
+	}
   }
 }
 
@@ -28,9 +28,9 @@
   justify-content: center;
 
   .hero2-text {
-    color: #FFFFFF;
-    text-shadow: 1px 1px 2px #000000;
-    padding: 1em;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+	padding: 1em;
   }
 }
 
@@ -42,12 +42,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 
   .hero3-text {
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #000000;
-    padding: 1em;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
+	padding: 1em;
+  }
+}
+
+.hero-section.seguridad {
+  background: #000000 url("../img/proteccionendPoint.png") no-repeat fixed center 120px;
+  opacity: .8;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-text.seguridad  {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+	padding: 1em;
+
+	h1 h2{
+	  color: #ECF0F1;
+	  font-weight: bold;
+	}
+  }
+}
+
+.hero-section-text{
+  @include breakpoint (small only) {
+	margin-top: 210px;
   }
 }
 

@@ -14,7 +14,10 @@ var sassPaths = [
 ];
 
 gulp.task('pug', function() {
-    gulp.src('pug/*.pug')
+    return gulp.src([
+        'pug/**/*.pug',
+        'pug/pages/*.pug'
+    ])
         .pipe(pug({
             pretty: true
         }))
