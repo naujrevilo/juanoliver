@@ -15,13 +15,12 @@ var sassPaths = [
 
 gulp.task('pug', function() {
     return gulp.src([
-        'pug/**/*.pug',
         'pug/pages/*.pug'
     ])
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('./')); // tell gulp our output folder
+        .pipe(gulp.dest('./dist/')); // tell gulp our output folder
 });
 
 gulp.task('sass', function() {
@@ -34,14 +33,14 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('default', ['sass', 'pug'], function() {
     browserSync.init({
-        server: "./"
+        server: "dist/"
     });
     gulp.watch(['./scss/**/*.scss'], ['sass']);
     gulp.watch("./pug/**/*.pug",['pug']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./dist/*.html").on('change', browserSync.reload);
 });
