@@ -5,15 +5,11 @@ footer{
 	bottom: 0;
 	width: 100%;
 
-  .copy-footer{
-	margin-top: 1em;
-  }
-
   a{
 	color: #ECF0F1;
 
 	&:hover{
-	  color: $alert-color;
+	  color: $secondary-color;
 	}
   }
 

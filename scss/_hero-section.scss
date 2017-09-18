@@ -79,7 +79,7 @@
 }
 
 .hero-section.infraestructura {
-  background: #000000 url("/img/network.jpg") no-repeat fixed center 120px;
+  background: #000000 url("/img/network.jpg") no-repeat fixed center 0;
   opacity: .8;
   width: 100%;
   max-width: 100%;
@@ -107,3 +107,130 @@
   }
 }
 
+.hero-section.segurinfo {
+  background: #000000 url("/img/segurinfo_banner.png") no-repeat fixed center 1px;
+  opacity: .8;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-text.segurinfo {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+	padding: 1em;
+
+	h1 h2 {
+	  color: #ECF0F1;
+	  font-weight: bold;
+	}
+  }
+}
+
+.hero-section-text {
+  @include breakpoint (small only) {
+	margin-top: 210px;
+  }
+}
+
+.hero-section.nosotros {
+  background: #000000 url("/img/about.jpg") no-repeat fixed center 0;
+  opacity: .8;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-text.nosotros {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+	padding: 1em;
+
+	h1 h2 {
+	  color: #ECF0F1;
+	  font-weight: bold;
+	}
+  }
+}
+
+.hero-section-text {
+  @include breakpoint (small only) {
+	margin-top: 210px;
+  }
+}
+
+.hero-section.website {
+  background: #000000 url("/img/email.jpg") no-repeat fixed center 96px;
+  opacity: .8;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-text.web {
+	color: #cb3e0f;
+	//text-shadow: 1px 1px 2px #cb3e0f;
+	padding: 1em;
+
+	/*h1 h2 {
+	  color: #cb3e0f;
+	  font-weight: bold;
+	}*/
+  }
+}
+
+.hero-section.capacitaciones {
+  background: #000000 url("/img/capacitaciones.jpg") no-repeat fixed center 96px;
+  opacity: .8;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-text.web {
+	color: #cb3e0f;
+	//text-shadow: 1px 1px 2px #cb3e0f;
+	padding: 1em;
+
+	/*h1 h2 {
+	  color: #cb3e0f;
+	  font-weight: bold;
+	}*/
+  }
+}
+
+.hero-section.contacto {
+  background: #000000 url("/img/contact.jpg") no-repeat fixed center 0;
+  background-size: cover;
+  opacity: .8;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hero-section-text.contacto {
+	color: #cb3e0f;
+	//text-shadow: 1px 1px 2px #cb3e0f;
+	padding: 1em;
+
+	/*h1 h2 {
+	  color: #cb3e0f;
+	  font-weight: bold;
+	}*/
+  }
+}

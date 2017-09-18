@@ -1,0 +1,161 @@
+extends ../templates/layout
+
+block content
+	.hero-section.contacto
+		.hero-section-text
+			h1 Pongase en contacto con nosotros
+
+
+	section.quienes
+		.media-object.stack-for-small
+			.media-object-section
+				.media-object-section
+					p Diligencie el siguiente formulario y nos pondremos en contacto con usted a la mayor brevedad posible. También puede contactarnos a lo teléfonos, correos y redes sociales que aparecen en esta página.
+
+					h1.text-center Formulario de Contacto
+
+				#crmWebToEntityForm(style="width:400px;margin:auto;")
+					meta(http-equiv="content-type", content="text/html;charset=UTF-8")
+					form(action="https://crm.zoho.com/crm/WebToLeadForm", name="WebToLeads1900402000000099008", method="POST", onsubmit='javascript:document.charset="UTF-8"; return checkMandatory()', accept-charset="UTF-8")
+						// Do not remove this code.
+						input(type="text", style="display:none;", name="xnQsjsdp", value="f7f791c8cd4bc96cb1b7a3c7e4eb8e093ef80714a9b8b7b5e60ad3ab44e2dd41")
+						input#zc_gad(type="hidden", name="zc_gad", value="")
+						input(type="text", style="display:none;", name="xmIwtLD", value="5fc5e687b1db52b2846d65398c503b3facf724029091104e9cda83944cc62a49")
+						input(type="text", style="display:none;", name="actionType", value="TGVhZHM=")
+						input(type="text", style="display:none;", name="returnURL", value="https://juanoliver.net")
+						// Do not remove this code.
+						input#ldeskuid(type="text", style="display:none;", name="ldeskuid")
+						input#LDTuvid(type="text", style="display:none;", name="LDTuvid")
+						// Do not remove this code.
+						style.
+							tr, td {
+								padding: 6px;
+								border-spacing: 0px;
+								border-style: hidden;
+								background: #ffffff;
+								align-content: center;
+							}
+						table(style="width:400px;background-color:white;color:#003466")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;")
+										| Nombres
+										span(style="color:red;") *
+									br
+									input(type="text", maxlength="40", style="width:80%;", name="First Name")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;")
+										| Apellidos
+										span(style="color:red;") *
+									br
+									input(type="text", maxlength="80", style="width:80%;", name="Last Name")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;") Empresa
+									br
+									input(type="text", maxlength="100", style="width:80%;", name="Company")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;")
+										| Correo electrónico
+										span(style="color:red;") *
+									br
+									input(type="text", maxlength="100", style="width:80%;", name="Email")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;")
+										| Tel.
+										span(style="color:red;") *
+									br
+									input(type="text", maxlength="30", style="width:80%;", name="Phone")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;") Ciudad
+									br
+									input(type="text", maxlength="30", style="width:80%;", name="City")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;") País
+									br
+									input(type="text", maxlength="30", style="width:80%;", name="Country")
+							tr
+								td
+									span(style="nowrap:nowrap;font-size:12px;font-family:Arial;width:80%;line-height: 22px;")
+										| Mensaje
+										span(style="color:red;") *
+									br
+									textarea(maxlength="1000", style="width:80%;", name="Description")  
+							tr
+								td(colspan="2", style="text-align:center; padding-top:15px;")
+									input.success.button(style="font-size:12px;color:#ffffff", type="submit", value="Enviar")
+									input.alert.button(type="reset", style="font-size:12px;color:#ffffff", value="Restablecer")
+						script.
+							var mndFileds = new Array('First Name', 'Last Name', 'Email', 'Phone', 'Description');
+							var fldLangVal = new Array('Nombres', 'Apellidos', 'Correo electrónico', 'Tel.', 'Mensaje');
+							var name = '';
+							var email = '';
+							function checkMandatory() {
+								for (i = 0; i < mndFileds.length; i++) {
+									var fieldObj = document.forms['WebToLeads1900402000000099008'][mndFileds[i]];
+									if (fieldObj) {
+										if (((fieldObj.value).replace(/^\\s+|\s+$/g, '')).length == 0) {
+											if (fieldObj.type == 'file') {
+												alert('Seleccione un archivo para cargar.');
+												fieldObj.focus();
+												return false;
+											}
+											alert(fldLangVal[i] + ' no puede estar vacío.');
+											fieldObj.focus();
+											return false;
+										} else if (fieldObj.nodeName == 'SELECT') {
+											if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+												alert(fldLangVal[i] + ' no puede ser nulo.');
+												fieldObj.focus();
+												return false;
+											}
+										} else if (fieldObj.type == 'checkbox') {
+											if (fieldObj.checked == false) {
+												alert('Please accept  ' + fldLangVal[i]);
+												fieldObj.focus();
+												return false;
+											}
+										}
+										try {
+											if (fieldObj.name == 'Last Name') {
+												name = fieldObj.value;
+											}
+										} catch (e) {
+										}
+									}
+								}
+								trackVisitor();
+							}
+						script#VisitorTracking(type="text/javascript").
+							var $zoho = $zoho || {
+								salesiq: {
+									values: {}, ready: function () {
+										$zoho.salesiq.floatbutton.visible('hide');
+									}
+								}
+							};var d = document;s = d.createElement('script');s.type = 'text/javascript';s.defer = true;s.src = 'https://salesiq.zoho.com/juanoliver/float.ls?embedname=juanoliver';t = d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s, t);function trackVisitor() {
+								try {
+									if ($zoho) {
+										var LDTuvidObj = document.forms['WebToLeads1900402000000099008']['LDTuvid'];
+										if (LDTuvidObj) {
+											LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
+										}
+										var firstnameObj = document.forms['WebToLeads1900402000000099008']['First Name'];
+										if (firstnameObj) {
+											name = firstnameObj.value + ' ' + name;
+										}
+										$zoho.salesiq.visitor.name(name);
+										var emailObj = document.forms['WebToLeads1900402000000099008']['Email'];
+										if (emailObj) {
+											email = emailObj.value;
+											$zoho.salesiq.visitor.email(email);
+										}
+									}
+								} catch (e) {
+								}
+							}

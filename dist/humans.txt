@@ -1,0 +1,14 @@
+/* TEAM */
+	Design and Developer:
+	Nauj Revilo,
+	Twitter: @secnar_colombia
+	Cartagena, Colombia.
+
+	Backend Developer:
+	Nauj Revilo
+
+/* SITE */
+	Standards: HTML5, CSS3, JavaScript
+	Components: Foundation, jQuery, ZOHO CRM, Google Analytics, Google AdSense
+	Last update: 2017/09/19
+	Software: WebStorm 2017.2

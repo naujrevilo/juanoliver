@@ -9,14 +9,26 @@ nav(data-sticky-container)
 				ul.menu
 					a.sitio(href="/")
 						img(src="../img/LogoBlanco80x80.png")
-
+						span Security Nauj Revilo
 
 			.top-bar-right
-				ul.menu.vertical.medium-horizontal.expanded
-					li: a.fi-home.espacio(href="/") Inicio
-
-					li: a.icon-service.espacio(href="#") Servicios
-					li: a.icon-shop.espacio(href="#") Tienda
-					li: a.icon-blog.espacio(href="#" target="_black") Blog
-					li: a.fi-torsos.espacio(href="#") Nosotros
-					li: a.icon-envelope-o.espacio.last(href="#") Contacto
+				ul.dropdown.menu.vertical.medium-horizontal(data-dropdown-menu data-responsive-menu="drilldown medium-dropdown")
+					li
+						a(href="/") Inicio
+					li.is-dropdown-submenu-parent
+						a.fi-list.espacio(href="#") Servicios
+						ul.menu
+							li
+								a(href="seguridad.html") Seguridad Informática
+							li
+								a(href="segurinfo.html") Seguridad de la Información
+							li
+								a(href="infraestructura.html") Infraestructura
+							li
+								a(href="websites.html") Sitios Web & Correo Electrónico
+							li
+								a(href="capacitaciones.html") Capacitaciones
+					li: a(href="/tienda") Tienda
+					li: a(href="/blog" target="_black") Blog
+					li: a(href="nosotros.html") Nosotros
+					li: a.last(href="/contacto.html") Contacto
