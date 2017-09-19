@@ -1,0 +1,11 @@
+# Denegar el acceso al directorio /wp-admin/ a todos los robots.
+
+User-agent: *
+Disallow: /blog/wp-admin/
+allow: /blog/wp-admin/admin-ajax.php
+# No aporta nada al posicionamiento orgánico:
+disallow: /blog/xmlrpc.php
+# Por si algún rastreador hiciera búsquedas (pueden producir contenido duplicado):
+disallow: /blog/*?s=
+disallow: /blog/wp-content/cache/
+sitemap: https://juanoliver.net/sitemaps.xml
